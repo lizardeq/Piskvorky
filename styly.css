@@ -1,8 +1,9 @@
 body {
   font-family: sans-serif;
   color: #ffffff;
-  background: linear-gradient(#615dad, #ffc8da);
-  background-repeat: no-repeat;
+  background: linear-gradient(#615dad, #ffc8da) fixed;
+  background-size: cover;
+  min-height: 100%;
 }
 
 h1 {
@@ -13,18 +14,6 @@ h1 {
   margin: 30px 0;
 }
 
-@media screen and (max-width: 370px) {
-  h1 {
-    font-size: 20px;
-  }
-}
-
-@media screen and (min-width: 640px) {
-  h1 {
-    font-size: 70px;
-  }
-}
-
 p {
   text-align: center;
 }
@@ -32,12 +21,17 @@ p {
 .stranka {
   display: flex;
   flex-direction: column;
-  margin: 10% 25% 30% 25%;
+  width: 370px;
   background-color: #283e50;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7px 7px 0 0;
+  overflow: hidden;
 }
 
 img {
-  flex-shrink: 0;
   width: 100%;
 }
 
