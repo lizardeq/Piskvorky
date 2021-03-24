@@ -3,7 +3,6 @@ body {
   color: #ffffff;
   background: linear-gradient(#615dad, #ffc8da);
   background-repeat: no-repeat;
-  margin: 0;
 }
 
 h1 {
@@ -19,46 +18,60 @@ p {
 .stranka {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 10% 25% 30% 25%;
+  background-color: #283e50;
 }
 
 img {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 30px;
-  height: 100%;
+  flex-shrink: 0;
   width: 100%;
-  /* background-size: cover; */
 }
 
-.box {
-  flex-basis: 100%;
+.obrazek {
+  flex-basis: 30px;
+  background-image: url(uvodni.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-/* .menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
-.menu a {
-  display: inline-block;
-  padding: 30px;
-}
-
-.menu a:hover,
-.menu a:focus,
-.menu a:active {
-  background-color: lightblue;
-}
-.cudlik {
-  background-color: black;
+.menu ul {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
-  padding: 30px;
-  flex-grow: 1;
 }
 
 .text {
-  background-color: #283e50;
+  size: 18px;
+}
+
+.menu .cudlik {
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  flex-basis: 100%;
+  margin: 1px 0 0 0;
+}
+
+.menu .pravidla {
+  background-color: #1fcca4;
+  color: #ffffff;
+}
+
+.menu .pravidla:hover,
+.menu .pravidla:focus,
+.menu .pravidla:active {
+  background-color: #1cbb96;
+}
+
+.menu .hrat {
+  background-color: #0197f6;
+  color: #ffffff;
+}
+
+.menu .hrat:hover,
+.menu .hrat:focus,
+.menu .hrat:active {
+  background-color: #0090e9;
 }
