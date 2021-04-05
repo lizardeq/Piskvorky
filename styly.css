@@ -21,7 +21,7 @@ p {
 .stranka {
   display: flex;
   flex-direction: column;
-  width: 370px;
+  width: 340px;
   background-color: #283e50;
 }
 
@@ -36,6 +36,7 @@ p {
 
 .stranka--pravidla {
   border-radius: 7px 7px 0 0;
+  margin: 0 auto;
 }
 
 img {
@@ -116,4 +117,10 @@ figcaption {
 
 .trans_bila {
   filter: invert(100%);
+}
+
+@media screen and (min-width: 800px) {
+  .stranka {
+    width: 630px;
+  }
 }
