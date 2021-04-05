@@ -120,7 +120,18 @@ figcaption {
 }
 
 @media screen and (min-width: 800px) {
-  .stranka {
+  .stranka--pravidla {
     width: 630px;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+  }
+
+  figure {
+    width: 35%;
+  }
+
+  .pravidla--instrukce {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
