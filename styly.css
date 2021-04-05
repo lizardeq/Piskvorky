@@ -23,12 +23,19 @@ p {
   flex-direction: column;
   width: 370px;
   background-color: #283e50;
+}
+
+.uvodni {
+  border-radius: 7px 7px 0 0;
+  overflow: hidden;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.stranka--pravidla {
   border-radius: 7px 7px 0 0;
-  overflow: hidden;
 }
 
 img {
@@ -63,14 +70,18 @@ img {
   margin: 1px 0 0 0;
 }
 
-.menu .pravidla {
+.menu .pravidla,
+.menu .index {
   background-color: #1fcca4;
   color: #ffffff;
 }
 
 .menu .pravidla:hover,
 .menu .pravidla:focus,
-.menu .pravidla:active {
+.menu .pravidla:active,
+.menu .index:hover,
+.menu .index:focus,
+.menu .index:active {
   background-color: #1cbb96;
 }
 
@@ -83,4 +94,26 @@ img {
 .menu .hrat:focus,
 .menu .hrat:active {
   background-color: #0090e9;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.text--cislovany li {
+  margin: 10px 0;
+}
+
+.kolecko,
+.krizek {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: text-bottom;
+}
+
+.trans_bila {
+  filter: invert(100%);
 }
