@@ -4,7 +4,7 @@ body {
   background: linear-gradient(#615dad, #ffc8da) fixed;
   background-size: cover;
   min-height: 100%;
-}
+  }
 
 h1 {
   font-family: 'Lobster', cursive;
@@ -41,6 +41,7 @@ p {
 
 img {
   width: 100%;
+
 }
 
 .obrazek {
@@ -104,7 +105,7 @@ figcaption {
 }
 
 .text--cislovany li {
-  margin: 10px 0;
+  margin: 0 15px 15px 15px;
 }
 
 .kolecko,
@@ -119,19 +120,28 @@ figcaption {
   filter: invert(100%);
 }
 
+figure {
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+  flex-grow: 1;
+}
+
+
 @media screen and (min-width: 800px) {
   .stranka--pravidla {
     width: 630px;
-    /* flex-wrap: wrap; */
-    /* flex-direction: row; */
   }
 
   figure {
-    width: 35%;
+    width: 43%;
   }
 
   .pravidla--instrukce {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  figcaption {
+    font-size: 12px;
   }
 }
