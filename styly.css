@@ -73,7 +73,8 @@ img {
 }
 
 .menu .pravidla,
-.menu .index {
+.menu .index,
+.domu {
   background-color: #1fcca4;
   color: #ffffff;
 }
@@ -83,18 +84,25 @@ img {
 .menu .pravidla:active,
 .menu .index:hover,
 .menu .index:focus,
-.menu .index:active {
+.menu .index:active,
+.domu:hover,
+.domu:focus,
+.domu:active {
   background-color: #1cbb96;
 }
 
-.menu .hrat {
+.menu .hrat,
+.restart {
   background-color: #0197f6;
   color: #ffffff;
 }
 
 .menu .hrat:hover,
 .menu .hrat:focus,
-.menu .hrat:active {
+.menu .hrat:active,
+.restart:hover,
+.restart:focus,
+.restart:active {
   background-color: #0090e9;
 }
 
@@ -145,3 +153,65 @@ figure {
     font-size: 12px;
   }
 }
+
+/* hra */
+
+.hra {
+  width: 80vmin;
+  margin: 20px;
+}
+
+#nadpis--hra {
+  font-size: 65px;
+}
+
+.menu--hra ul{
+  list-style-type: none;
+  display: flex;
+   padding: 0;
+  }
+
+  .hraje {
+    flex-basis: 45vw;
+    flex-grow: 1;
+    font-weight: 700;
+    font-size: 25px;
+   }
+
+  .hraje a {
+    margin: auto;
+    width: 10%;
+  }
+
+.menu--hra li {
+  margin: 5px;
+  flex-basis: 40px;
+  border-radius: 5px;
+}
+
+.menu--hra img {
+  width: 26px;
+  margin: 7px;
+}
+
+.pole {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vmin;
+  height: 80vmin;
+ }
+
+.pole button {
+  background-color: rgba(245, 245, 245, 0.5);
+  width: 10%;
+  padding: 0;
+  border-width: .5px;
+  border-color: black;
+}
+
+.pole button:hover,
+.pole button:active,
+.pole button:focus {
+  background-color: rgba(245, 245, 245, 0.7);
+}
+
