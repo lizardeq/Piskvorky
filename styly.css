@@ -215,3 +215,19 @@ figure {
   background-color: rgba(245, 245, 245, 0.7);
 }
 
+.pole--kolecko {
+  background-image: url('img/circle.svg');
+  background-repeat:no-repeat;
+  background-size: 85%;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.pole--krizek {
+  background-image: url('img/cross.svg');
+  background-repeat:no-repeat;
+  background-size: 85%;
+  background-position-x: center;
+  background-position-y: center;
+}
+
