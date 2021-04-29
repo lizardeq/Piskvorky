@@ -9,7 +9,7 @@ const klik = (event) => {
     hraje.alt="Bily krizek";
     // hraje.classList.add("krizek");
     // hraje.classList.remove("kolecko");
-    event.target.classList.add("pole--kolecko");
+    event.target.classList.add('pole--kolecko');
     event.target.disabled = true;
     tah = 'krizek';
   } else {
@@ -17,7 +17,7 @@ const klik = (event) => {
     hraje.alt="Bile kolecko";
     // hraje.classList.add("kolecko");
     // hraje.classList.remove("krizek");
-    event.target.classList.add("pole--krizek");
+    event.target.classList.add('pole--krizek');
     event.target.disabled = true;
     tah = 'kolecko';
   }
@@ -25,7 +25,7 @@ const klik = (event) => {
 
 
 
-const pole = document.querySelector('.btn');
+const pole = document.querySelectorAll('.btn');
 for (let i = 0; i < pole.length; i++) {
 pole[i].addEventListener('click', klik);
 };
