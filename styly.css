@@ -156,9 +156,18 @@ figure {
 
 /* hra */
 
+@keyframes scale {
+  from {
+    background-size: 0%;
+  }
+  to {
+    background-size: 75%;
+  }
+}
+
 .hra {
-  width: 80vmin;
-  margin: 20px;
+  width: 70vmin;
+  margin: 0 auto;
 }
 
 #nadpis--hra {
@@ -197,8 +206,8 @@ figure {
 .pole {
   display: flex;
   flex-wrap: wrap;
-  width: 80vmin;
-  height: 80vmin;
+  width: 70vmin;
+  height: 70vmin;
  }
 
 .pole button {
@@ -221,6 +230,8 @@ figure {
   background-size: 85%;
   background-position-x: center;
   background-position-y: center;
+  animation: scale 0.25s linear;
+  filter: invert(15%);
 }
 
 .pole--krizek {
@@ -229,5 +240,7 @@ figure {
   background-size: 85%;
   background-position-x: center;
   background-position-y: center;
+  animation: scale 0.25s linear;
+  filter: invert(15%);
 }
 
