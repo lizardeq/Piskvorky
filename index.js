@@ -106,18 +106,18 @@ const isWinningMove = (field) => {
 	return false
 }
 
-if (isWinningMove(5)) {
-  setTimeout(() => {
-    if (player === 'krizek') {
-      const conf = confirm(`Vyhrává kolečko.`);
-      if (conf) {
-        location.reload();
-      }
-    } else {
-      const conf = confirm(`Vyhrává křížek.`);
-      if (conf) {
-        location.reload();
-      }
-    }
-  }, 250);
+
+pole.forEach(btnItem => btnItem.addEventListener('click', (event) => {klik(event);
+let winner = '';
+if (isWinningMove(event.target) === true) {
+  if (hraje === 'kolecko') {
+    winner = 'Křížek';
+  } else (hraje === 'krizek') {
+    winner = 'Kolečko';
+  }
+}
+let novaHra = confirm(`Vyhrává ${winner}. Chceš zkusit ještě jednou?`);
+if (novaHra === true) {
+  location.reload();
 };
+}));
