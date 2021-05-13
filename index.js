@@ -58,6 +58,63 @@ const isWinningMove = (field) => {
   
 
 	let i
+	let j
+
+	let leftDown = 1 //doleva dolu
+	i = origin.row
+	j = origin.column
+
+	while (i < boardSize - 1 && j > 0 && symbol === getSymbol(getField(i+1, j-1))) {
+		leftDown++
+		i++
+		j--
+	}
+
+	if (leftDown >= symbolsToWin) {
+		return true
+	}
+
+	let leftUp = 1 //doleva nahoru
+	i = origin.row
+	j = origin.column
+
+	while (i > 0 && j < boardSize - 1 && symbol === getSymbol(getField(i-1, j+1))) {
+		leftUp++
+		i--
+		j++
+	}
+
+	if (leftUp >= symbolsToWin) {
+		return true
+	}
+
+	let rightDown = 1 //doprava dolu
+	i = origin.row
+	j = origin.column
+
+	while (i < boardSize - 1 && j < boardSize - 1 && symbol === getSymbol(getField(i+1, j+1))) {
+		rightDown++
+		i++
+		j++
+	}
+
+	if (rightDown >= symbolsToWin) {
+		return true
+	}
+
+	let rightUp = 1 //doprava nahoru
+	i = origin.row
+	j = origin.column
+
+	while (i > 0 && j > 0 && symbol === getSymbol(getField(i-1, j-1))) {
+		rightUp++
+		i--
+		j--
+	}
+
+	if (rightUp >= symbolsToWin) {
+		return true
+	}
 
 	let inRow = 1 // Jednička pro právě vybrané políčko
 	// Doleva
