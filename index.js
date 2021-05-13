@@ -107,12 +107,6 @@ const isWinningMove = (field) => {
 }
 
 
-// const pole2 = document.querySelectorAll('.btn');
-// for (let i = 0; i < pole.length; i++) {
-// pole2[i].addEventListener('click', (event)=>{isWinningMove(event.target);
-// if (isWinningMove === true) {console.log(true)};
-// });
-// };
 
 let klik = (event) => {
   if (tah === 'kolecko') {
@@ -121,35 +115,26 @@ let klik = (event) => {
     event.target.classList.add('pole--kolecko');
     event.target.disabled = true;
     tah = 'krizek';
-		isWinningMove(event.target);
-		if (isWinningMove === true) {
-			console.log('Hura');
-		}
-  } else {
+		if (isWinningMove(event.target) === true) {
+			const novaHra = confirm(`Vyhrává kolečko. Chceš zkusit ještě jednou?`);
+			if (novaHra === true) {
+				location.reload();
+			}
+  }} else {
     hraje.src="img/circle.svg";
     hraje.alt="Bile kolecko";
     event.target.classList.add('pole--krizek');
     event.target.disabled = true;
     tah = 'kolecko';
-  }
-};
+		if (isWinningMove(event.target) === true) {
+			const novaHra = confirm(`Vyhrává křížek. Chceš zkusit ještě jednou?`);
+			if (novaHra === true) {
+				location.reload();
+  		}
+		}};}
 
 const pole = document.querySelectorAll('.btn');
 for (let i = 0; i < pole.length; i++) {
 pole[i].addEventListener('click', klik);
 };
 
-
-// let winner = '';
-// if (isWinningMove(event.target) === true) {
-//   if (hraje === 'kolecko') {
-//     winner = 'křížek';
-//   } else if (hraje === 'krizek') {
-//     winner = 'kolečko';
-//   }
-// }
-// let novaHra = confirm(`Vyhrává ${winner}. Chceš zkusit ještě jednou?`);
-// if (novaHra === true) {
-//   location.reload();
-// };
-// }));
